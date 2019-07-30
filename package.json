@@ -1,0 +1,33 @@
+{
+  "name": "aygh",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/facn6/AYGH.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/facn6/AYGH/issues"
+  },
+  "homepage": "https://github.com/facn6/AYGH#readme",
+  "dependencies": {
+    "eslint-config-airbnb": "^17.1.1",
+    "nodemon": "^1.19.1",
+    "supertest": "^4.0.2",
+    "tape": "^4.11.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.18.2"
+  }
+}
