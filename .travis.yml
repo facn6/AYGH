@@ -6,3 +6,5 @@ matrix:
   fast_finish: true
 install:
     - npm install
+script:
+    - npm test
