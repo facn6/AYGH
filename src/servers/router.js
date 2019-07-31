@@ -1,10 +1,10 @@
 
-const handler = require("./handlers");
+const handler = require("../helpers/handlers");
 
 const router = (request, response) => {
 const url = request.url;
   if (url === "/") {
-   handler.handleHome(request, response);
+   handler.handleHome(response);
    }
    // else if(url==="/json") {
    // handler.handleJson(request, response);
