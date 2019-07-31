@@ -2,9 +2,9 @@ const fs = require("fs");
 const path = require("path");
 
 
-const handleHome= (request,response)=> {
-
-    fs.readFile(__dirname + "/../public/index.html", function(error, file) {
+const handleHome= (response)=> {
+ const filepath = path.join(__dirname, '..', '/..','/public','/view','index.html');
+    fs.readFile(filepath, function(error, file) {
       if (error) {
         response.writeHead(500, { "Content-type": "text/html" });
         response.end("error in the main page handler");
@@ -26,17 +26,21 @@ const handleHome= (request,response)=> {
   //     }
   //   });
   // }
+  var filePath='';
    const handlePublic= (request,response)=> {
      const url=request.url;
-    const extention = url.split(".")[1];
+    var extention = url.split(".")[1];
     const extentionType = {
       html: "text/html",
       css: "text/css",
       js: "application/javascript",
       ico: "image/x-icon",
-      jpg: "image/jpeg"
+      jpg: "image/jpeg",
+      png: "image/png"
     };
-    const filePath = path.join(__dirname, "..", "public", url);
+
+     filePath = path.join(__dirname, "..","/..", "/public","/view", url);
+
     fs.readFile(filePath, (error, file) => {
       if (error) {
         response.writeHead(500, { "Content-type": extentionType.html });
@@ -45,7 +49,9 @@ const handleHome= (request,response)=> {
         response.writeHead(200, { "Content-type": extentionType[extention] });
         response.end(file);
       }
+
     });
+
   }
 
 
