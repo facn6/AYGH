@@ -7,7 +7,9 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\""
+    "test": "echo \"Error: no test specified\"",
+    "start": "node src/server.js",
+    "div": "nodemon src/servers/server.js"
   },
   "repository": {
     "type": "git",
