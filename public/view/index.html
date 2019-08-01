@@ -13,11 +13,22 @@
 
     <section class="search-sec">
         <div><img src="./search.png" class="search-icon" alt="search-icon"></button></div>
-        <div><button id="button">Search</button></div>
-        <div><input type="text" class="search-bar"  id="inputbar" placeholder="Search for news..."></div>
-        <ul class="suggestions">
+        <select id="list" class="dropDown" onchange="getSelectValue()">
 
-        </ul>
+            <option></option>
+            <option value="en">English</option>
+            <option value="ar" >Arabic</option>
+            <option value="he">Hebrew</option>
+            <option value="ru">Russian</option>
+        
+
+        </select>
+        <div id="result1">
+
+        </div>
+
+
+
     </section>
 
     <script src='main.js'> </script>
