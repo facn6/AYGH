@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
-
+const requester = require('request');
+var https = require('https');
 
 const handleHome = (response) => {
   const filepath = path.join(__dirname, '..', '/..', '/public', '/view', 'index.html');
@@ -44,8 +45,8 @@ const handlePublic = (request, response) => {
 
 
 const handlerNews = (request, response, section) => {
-  requester(
-    ` https://newsapi.org/${section}&apiKey=416eb04821e74994a23b72fb0e7f5e0a`,
+  https.request(
+  ` https://newsapi.org/v2/sources?language=${section}&apiKey=416eb04821e74994a23b72fb0e7f5e0a`,
     (err, res, body) => {
       if (err) {
         console.log(`Error ${err}`);
