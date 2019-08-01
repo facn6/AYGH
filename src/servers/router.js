@@ -8,7 +8,7 @@ const router = (req, res) => {
     handler.handlePublic(req, res);
   } else if (req.url === '/en' || req.url === '/ar' || req.url === '/he' || req.url === '/ru' )
   {
-    const section = req.url.substring(1);
+    const section = req.url.substring[1];
     handler.handlerNews(req, res, section);
   } else {
     handler.handleNotfound(req, res);
