@@ -47,7 +47,7 @@ const handleHome= (response)=> {
 
 const handlerNews = (request, response, section) => {
   requester(
-  ` https://newsapi.org/${section}&apiKey=416eb04821e74994a23b72fb0e7f5e0a`,
+  ` https://newsapi.org/v2/sources?language=${section}&apiKey=416eb04821e74994a23b72fb0e7f5e0a`,
     (err, res, body) => {
       if (err) {
         console.log(`Error ${err}`);
